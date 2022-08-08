@@ -1,53 +1,78 @@
-* {
-    padding: 0;
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+body {
     margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
 }
 
-a {
-    color: #0984e3;
-}
-
-.under-construction {
-    position: fixed;
-
-    width: 100vw;
-    height: 100vh;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #eeeeee;
-
+nav {
     display: flex;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 5rem;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
 }
 
-.under-construction div {
-    font-size: 1.5em;
-
-    text-align: center;
-    margin: auto;
-
-    z-index: 1;
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-size: 20px;
 }
 
-.under-construction img {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 100vw;
-    height: 100vh;
-
-    object-fit: cover;
+.nav-item {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+.nav-item:hover {
+    color: red;
 }
 
-.under-construction span {
-    position: fixed;
-    top: 100%;
-    transform: translateY(-200%);
+.nav-logo-container {
+    text-decoration: none;
+}
+.nav-logo {
+    height: 100%;
+}
 
+.bg-img {
     width: 100%;
-    text-align: center;
 }
 
-.hidden {
-    display: none;
+section {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+section h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+section p {
+    font-size: 16px;
+    font-weight:300;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
 }
