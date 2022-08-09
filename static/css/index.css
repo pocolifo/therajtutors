@@ -21,12 +21,12 @@ nav {
     background-color: rgba(255, 255, 255, 0.85);
     height: 5rem;
 
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
 }
 
 .nav-links {
@@ -49,23 +49,33 @@ nav {
 .nav-logo-container {
     text-decoration: none;
 }
+
 .nav-logo {
     height: 100%;
+    transform: scale(0.75);
 }
 
 .bg-img {
-    width: 100%;
+    object-fit: cover;
+    width: 100vw;
+    height: 70vh;
 }
 
 section {
     padding-left: 15%;
     padding-right: 15%;
 }
+
+section img {
+    width: 50%;
+}
+
 section h1 {
     text-align: center;
     font-size: 36px;
     font-weight: 600;
 }
+
 section p {
     font-size: 16px;
     font-weight:300;
@@ -73,6 +83,28 @@ section p {
 }
 
 footer {
-    text-align: center;
-    font-size: 12px;
+    background: #ffffff;
+    padding: 30px 25%;
 }
+
+footer .footer-sections {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+a {
+    color: #5352ed;
+}
+
+a:hover {
+    color: #70a1ff;
+}
+
+@media only screen and (max-width: 1000px) {
+    footer .footer-sections {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        text-align: center;
+    }
+  }
